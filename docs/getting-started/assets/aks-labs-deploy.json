@@ -60,7 +60,12 @@
           "family": "A",
           "name": "standard"
         },
-        "tenantId": "[subscription().tenantId]"
+        "tenantId": "[subscription().tenantId]",
+        "publicNetworkAccess": "Disabled", 
+        "networkAcls": {
+          "bypass": "AzureServices",
+          "defaultAction": "Deny" // Denies all by default
+        }
       }
     },
     {
